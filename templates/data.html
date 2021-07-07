@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+        <body>
+            my_dict = {'foo': 'bar', 'spam': 'eggs'}
+ # outputs 'foo'
+            {% for key,value in form_data.items() %}
+                <h2> {{key}}</h2>
+                <p> {{value}}</p>
+            {% endfor %}
+        </body>
+</html>
+

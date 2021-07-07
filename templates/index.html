@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% if n %}
+            {% for i in range(n) %}
+                <ul>
+                    {% if i % 3 == 0 and i % 5 == 0%}
+                        <li>FizzBuzz</li>
+                    {% elif i % 3 == 0%}
+                        <li>Fizz</li>
+                    {% elif i % 5 == 0%}
+                        <li>Buzz</li>
+                    {% else %}
+                        <li>{{ i }}</li>
+                    {% endif %}
+                </ul>
+            {% endfor %}
+        {% else %}
+            <p>Please enter number</p>
+            <a href="{{url_for('result')}}">Go to form</a>
+        {% endif %}
+    </body>
+</html>
+
+
