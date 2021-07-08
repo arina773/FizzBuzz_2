@@ -18,7 +18,7 @@
             {% endfor %}
         {% else %}
             <p>Please enter number</p>
-            <a href="{{url_for('result')}}">Go to form</a>
+            <a href="{{url_for('result', n='0')}}">Go to form</a>
         {% endif %}
     </body>
 </html>

@@ -22,10 +22,10 @@ def submit():
         return render_template('submit.html')
 
 
-@app.route("/index", methods=['POST', 'GET'])
-def result():
+@app.route("/result/<n>", methods=['POST', 'GET'])
+def result(n):
     if request.method == 'GET':
-            return render_template('submit.html')
+        return render_template('submit.html')
     elif request.method == 'POST':
         n = list(request.form.values())[0]
         if n.isdigit():

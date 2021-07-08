@@ -4,13 +4,13 @@
     </head>
     <body>
 
-        <form action="/index" method = "POST">
+        <form action="{{ url_for('result', n='5') }}" method = "POST">
             <p>Please type number
-                <input type="int" name="Number" key="Number"/>
+                <input type="int" name="Number" value="{{Number}}"/>
             </p>
-            <p><input type = "submit" value = "Submit" /></p>
+            <p><input type="submit" value="Submit" /></p>
         </form>
-
+        <p>{{Number}}</p>
     </body>
 </html>
 
